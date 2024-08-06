@@ -2,18 +2,16 @@ import java.util.Date;
 
 public class Servico {
     private Cliente cliente;
-    private double preco;
-    private Date dataInicio;
-    private Date dataFim;
     private Funcionario funcionario;
-    private String descricao;
-    public double valorHora = 20.0;
 
-    public Servico(Cliente cliente, double preco, Date dataInicio, Date dataFim, Funcionario funcionario, String descricao) {
+
+    private Carro carro;
+    private double preco;
+    private String descricao;
+    public Servico(Cliente cliente, Funcionario funcionario, Carro carro, double preco, String descricao) {
         this.cliente = cliente;
+        this.carro = carro;
         this.preco = preco;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
         this.funcionario = funcionario;
         this.descricao = descricao;
     }
@@ -34,22 +32,6 @@ public class Servico {
         this.preco = preco;
     }
 
-    public Date getDataInicio() {
-        return dataInicio;
-    }
-
-    public void setDataInicio(Date dataInicio) {
-        this.dataInicio = dataInicio;
-    }
-
-    public Date getDataFim() {
-        return dataFim;
-    }
-
-    public void setDataFim(Date dataFim) {
-        this.dataFim = dataFim;
-    }
-
     public Funcionario getFuncionario() {
         return funcionario;
     }
@@ -65,4 +47,13 @@ public class Servico {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public Carro getCarro() {
+        return carro;
+    }
+
+    public void setCarro(Carro carro) {
+        this.carro = carro;
+    }
+
 }
